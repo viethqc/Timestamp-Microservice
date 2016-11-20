@@ -6,7 +6,7 @@ var monthNames = ["January", "February", "March", "April", "May", "June",
   	"July", "August", "September", "October", "November", "December"
 ];
 
-app.set('port', 9960);
+app.set('port', listen(process.env.PORT || 5000));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
