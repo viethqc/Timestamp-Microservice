@@ -6,6 +6,8 @@ var monthNames = ["January", "February", "March", "April", "May", "June",
   	"July", "August", "September", "October", "November", "December"
 ];
 
+app.set('port', 9960);
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
@@ -92,7 +94,7 @@ app.get("/*", function(request, response){
 	response.render('index', {title: JSON.stringify(objResult)});
 });
 
-app.listen(9960, function(){
+app.listen(app.get('port'), function(){
 	console.log("Listen in port : %d", 9960);
 })
 
